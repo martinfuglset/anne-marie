@@ -2,7 +2,7 @@ import { FiInstagram, FiMail, FiPhone } from 'react-icons/fi'; // Feather Icons 
 
 const Footer = () => (
   <footer className="py-8 bg-white">
-    <div className="container mx-auto flex justify-center items-center gap-8">
+    <div className="container mx-auto flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8">
       {/* Instagram */}
       <div className="flex items-center gap-2">
         <FiInstagram className="text-black h-5 w-5" strokeWidth={1} /> {/* Reduced stroke weight */}
