@@ -2,30 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom Font: Garamond Light */
-@font-face {
-  font-family: 'Garamond';
-  src: url('/fonts/ITCGaramondStd-Lt.ttf') format('truetype');
-  font-weight: 300; /* Light weight */
-  font-style: normal;
-}
+/* Import EB Garamond Medium Weight from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
 
-/* Apply Garamond Light Globally */
+/* Apply EB Garamond Medium Globally */
 body {
   @apply bg-white text-black;
-  font-family: 'Garamond', serif;
-  font-weight: 300; /* Always use light weight */
+  font-family: 'EB Garamond', serif;
+  font-weight: 500; /* Medium weight */
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Garamond', serif;
-  font-weight: 300; /* No bold weights */
+  font-family: 'EB Garamond', serif;
+  font-weight: 500; /* Medium weight for headings */
 }
 
 p {
   @apply leading-relaxed mb-4;
-  font-family: 'Garamond', serif;
-  font-weight: 300; /* Ensure consistent light weight */
+  font-family: 'EB Garamond', serif;
+  font-weight: 500; /* Consistent medium weight */
 }
 
 .container {
@@ -34,20 +29,20 @@ p {
 
 a {
   @apply text-black hover:underline;
-  font-family: 'Garamond', serif;
-  font-weight: 300;
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
 }
 
 input, textarea {
   @apply w-full border border-black p-2 mb-4 bg-white text-black;
-  font-family: 'Garamond', serif;
-  font-weight: 300;
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
 }
 
 button {
   @apply bg-black text-white uppercase px-4 py-2;
-  font-family: 'Garamond', serif;
-  font-weight: 300;
+  font-family: 'EB Garamond', serif;
+  font-weight: 500;
 }
 
 button:hover {

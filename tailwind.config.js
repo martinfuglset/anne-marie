@@ -11,6 +11,9 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        garamond: ['"EB Garamond"', 'serif'], // Custom font alias
+      },
     },
   },
   plugins: [],
