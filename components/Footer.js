@@ -20,10 +20,10 @@ const Footer = () => (
       <div className="flex items-center gap-2">
         <FiMail className="text-black h-5 w-5" strokeWidth={1} /> {/* Reduced stroke weight */}
         <a
-          href="mailto:hello@anne-marie.no"
+          href="mailto:kontakt@anne-marie.no"
           className="hover:underline font-light"
         >
-          hello@anne-marie.no
+          kontakt@anne-marie.no
         </a>
       </div>
 
