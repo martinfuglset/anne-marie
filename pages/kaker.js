@@ -1,7 +1,13 @@
 export default function Kaker() {
     return (
       <>
-        <section>
+        <section className="pb-8">
+        <img
+          src="/kake.png"
+          className="w-full h-auto px-8"
+        />
+      </section>
+        <section className="pb-8 px-8">
           <h2 className="text-2xl mb-4 font-light">Kaker</h2>
           <p className="font-light">
             Våre bryllupskaker er laget med kjærlighet og de beste ingrediensene. Vi lager alt fra klassiske kaker til

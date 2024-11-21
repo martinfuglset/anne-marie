@@ -7,12 +7,17 @@ const Layout = ({ children }) => (
     {/* Header */}
     <Header />
 
-    {/* Main Content - Centered */}
-    <main className="flex-grow flex items-center justify-center">
-      <div className="text-center container mx-auto px-4">
+    {/* Main Content */}
+    <main className="flex-grow">
+      <div className="container mx-auto px-4">
         {children}
       </div>
     </main>
+
+    {/* Kontakt */}
+    <div className="container mx-auto px-4">
+      <ContactForm />
+    </div>
 
     {/* Footer */}
     <Footer />
