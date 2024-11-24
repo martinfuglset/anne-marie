@@ -16,10 +16,13 @@ export default function handler(req, res) {
     return res.status(404).json({ error: `Folder "${folder}" not found.` });
   }
 
-  // Read and return all image files in the folder
+  const supportedExtensions = /\.(png|jpe?g|gif|webp|bmp|tiff|svg)$/i;
+
+  // Sort files by filename
   const images = fs
     .readdirSync(folderPath)
-    .filter((file) => /\.(png|jpe?g|gif)$/i.test(file)) // Filter image files
+    .filter((file) => supportedExtensions.test(file)) // Only include image files
+    .sort() // Sort files alphabetically
     .map((file) => `/${folder}/${file}`); // Return the public URL for each file
 
   res.status(200).json(images);

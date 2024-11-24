@@ -21,7 +21,7 @@ export default function Home() {
               <div className="text-center p-4 font-light">Blomster & Dekor</div>
               <div className="w-full aspect-square overflow-hidden">
                 <img
-                  src="/blomster/IMG_1715.JPG"
+                  src="/blomster/blomster.png"
                   alt="Blomster & Dekor"
                   className="w-full h-full object-cover"
                 />
