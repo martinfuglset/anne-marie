@@ -21,7 +21,7 @@ export default function Home() {
               <div className="text-center p-4 font-light">Blomster & Dekor</div>
               <div className="w-full aspect-square overflow-hidden">
                 <img
-                  src="/blomster/blomster.png"
+                  src="/blomster/001.png"
                   alt="Blomster & Dekor"
                   className="w-full h-full object-cover"
                 />
@@ -36,7 +36,7 @@ export default function Home() {
               <div className="text-center p-4 font-light">Kaker</div>
               <div className="w-full aspect-square overflow-hidden">
                 <img
-                  src="/kaker/IMG_1716.JPG"
+                  src="/kaker/001.jpg"
                   alt="Kaker"
                   className="w-full h-full object-cover"
                 />
@@ -51,7 +51,7 @@ export default function Home() {
               <div className="text-center p-4 font-light">Makroner & Cupcakes</div>
               <div className="w-full aspect-square overflow-hidden">
                 <img
-                  src="/makroner/IMG_1723.JPG"
+                  src="/makroner/001.png"
                   alt="Makroner & Cupcakes"
                   className="w-full h-full object-cover"
                 />

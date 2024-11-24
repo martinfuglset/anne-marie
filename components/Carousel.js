@@ -3,11 +3,12 @@ import React, { useEffect, useState } from 'react';
 export default function Carousel({ folders }) {
   const [validImages, setValidImages] = useState([]);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [previousImages, setPreviousImages] = useState([]); // Store previous images
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     async function fetchImages() {
       try {
-        // Convert folders to an array if a single folder is passed as a string
         const folderArray = Array.isArray(folders) ? folders : [folders];
 
         const imagePromises = folderArray.map(async (folder) => {
@@ -16,12 +17,15 @@ export default function Carousel({ folders }) {
           return response.json();
         });
 
-        // Combine images from all folders
         const imagesFromAllFolders = (await Promise.all(imagePromises)).flat();
+
+        setPreviousImages(validImages); // Save current images as previous images
         setValidImages(imagesFromAllFolders);
+        setIsLoading(false); // Mark loading as complete
       } catch (error) {
         console.error('Error fetching images:', error);
         setValidImages([]);
+        setIsLoading(false);
       }
     }
 
@@ -40,7 +44,18 @@ export default function Carousel({ folders }) {
 
   return (
     <div className="relative w-full h-[500px] overflow-hidden">
-      {validImages.length > 0 ? (
+      {isLoading && previousImages.length > 0 ? (
+        previousImages.map((src, index) => (
+          <img
+            key={index}
+            src={src}
+            alt={`Slide ${index + 1}`}
+            className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              index === currentImageIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
+            }`}
+          />
+        ))
+      ) : validImages.length > 0 ? (
         validImages.map((src, index) => (
           <img
             key={index}
@@ -52,7 +67,9 @@ export default function Carousel({ folders }) {
           />
         ))
       ) : (
-        <p className="text-center text-gray-500">No images found</p>
+        <div className="absolute top-0 left-0 w-full h-full bg-gray-200 flex items-center justify-center">
+          <p className="text-gray-500">No images found</p>
+        </div>
       )}
     </div>
   );
