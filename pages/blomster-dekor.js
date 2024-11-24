@@ -7,7 +7,7 @@ export default function BlomsterDekor() {
       <section className="pb-8">
         <Carousel folders="blomster" />
       </section>
-      <section className="pb-8 px-8">
+      <section className="pb-8 px-8 text-center">
         <h2 className="text-2xl mb-4 font-light">Blomster & Dekor</h2>
         <p className="font-light">
           Vi tilbyr vakre blomster og dekorasjoner for bryllup og spesielle anledninger. Hvert arrangement er

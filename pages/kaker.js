@@ -7,7 +7,7 @@ export default function Kaker() {
       <section className="pb-8">
         <Carousel folders="kaker" />
       </section>
-      <section className="pb-8 px-8">
+      <section className="pb-8 px-8 text-center">
         <h2 className="text-2xl mb-4 font-light">Kaker</h2>
         <p className="font-light">
           Våre bryllupskaker er laget med kjærlighet og de beste ingrediensene. Vi lager alt fra klassiske kaker til
