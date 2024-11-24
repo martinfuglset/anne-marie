@@ -8,6 +8,7 @@ export default function Home() {
       <section className="pb-8">
         <Carousel folders={['blomster', 'kaker', 'makroner']} />
       </section>
+      <div style={{ height: '40px' }}></div>
 
       {/* Services Section */}
       <section className="pb-8 px-8">

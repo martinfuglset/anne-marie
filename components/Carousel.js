@@ -6,6 +6,9 @@ export default function Carousel({ folders }) {
   const [previousImages, setPreviousImages] = useState([]); // Store previous images
   const [isLoading, setIsLoading] = useState(true);
 
+  // Define a variable for responsive height
+  const DYNAMIC_HEIGHT = "h-[500px] sm:h-[800px]"; // 200px on mobile, 800px on desktop
+
   useEffect(() => {
     async function fetchImages() {
       try {
@@ -43,7 +46,7 @@ export default function Carousel({ folders }) {
   }, [validImages]);
 
   return (
-    <div className="relative w-full h-[500px] overflow-hidden">
+    <div className={`relative w-full ${DYNAMIC_HEIGHT} overflow-hidden`}>
       {isLoading && previousImages.length > 0 ? (
         previousImages.map((src, index) => (
           <img
