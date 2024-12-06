@@ -14,6 +14,23 @@ module.exports = {
       fontFamily: {
         garamond: ['"EB Garamond"', 'serif'], // Custom font alias
       },
+      transitionTimingFunction: {
+        'in-out-smooth': 'cubic-bezier(0.4, 0, 0.2, 1)', // Smoother easing
+      },
+      keyframes: {
+        fadeInUp: {
+          '0%': { opacity: 0, transform: 'translateY(20px)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' },
+        },
+        fadeOutDown: {
+          '0%': { opacity: 1, transform: 'translateY(0)' },
+          '100%': { opacity: 0, transform: 'translateY(20px)' },
+        },
+      },
+      animation: {
+        fadeInUp: 'fadeInUp 0.5s ease-out',
+        fadeOutDown: 'fadeOutDown 0.5s ease-out',
+      },
     },
   },
   plugins: [],

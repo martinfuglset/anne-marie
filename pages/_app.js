@@ -1,36 +1,37 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import Head from 'next/head';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import Layout from '../components/Layout';
-import '../styles/globals.css';
+import '../styles/globals.css'; // Ensure TailwindCSS is imported
 
-const pageTransition = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: -20 },
-};
+export default function MyApp({ Component, pageProps }) {
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
-export default function MyApp({ Component, pageProps, router }) {
+  useEffect(() => {
+    const handleStart = () => setLoading(true);
+    const handleStop = () => setLoading(false);
+
+    router.events.on('routeChangeStart', handleStart);
+    router.events.on('routeChangeComplete', handleStop);
+    router.events.on('routeChangeError', handleStop);
+
+    return () => {
+      router.events.off('routeChangeStart', handleStart);
+      router.events.off('routeChangeComplete', handleStop);
+      router.events.off('routeChangeError', handleStop);
+    };
+  }, [router]);
+
   return (
-    <>
-      <Head>
-        <title>Anne Marie</title>
-        <meta name="description" content="Welcome to Anne Marie's website" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Layout>
-        <AnimatePresence mode="wait" initial={false}>
-          <motion.div
-            key={router.route}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            variants={pageTransition}
-            transition={{ duration: 0.5 }}
-          >
-            <Component {...pageProps} />
-          </motion.div>
-        </AnimatePresence>
-      </Layout>
-    </>
+    <Layout>
+      {/* Page content with animation */}
+      <div
+        className={`transform transition-all duration-500 ${
+          loading ? 'animate-fadeOutDown' : 'animate-fadeInUp'
+        }`}
+      >
+        <Component {...pageProps} />
+      </div>
+    </Layout>
   );
 }
