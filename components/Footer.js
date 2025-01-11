@@ -1,5 +1,5 @@
 const Footer = () => (
-  <footer className="py-8 bg-white">
+  <footer className="py-8 bg-white text-lg">
     <div className="container mx-auto flex flex-col items-center gap-4 sm:gap-8">
       {/* Top Section */}
       <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8">

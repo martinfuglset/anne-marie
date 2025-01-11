@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Import EB Garamond Medium Weight from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&display=swap');
+/* Import EB Garamond and Dancing Script from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Dancing+Script:wght@400;500;600&display=swap');
 
 /* Apply EB Garamond Medium Globally */
 body {
@@ -62,4 +62,10 @@ img {
 .page-transition.loading {
   opacity: 0;
   transform: translateY(20px);
+}
+
+/* Custom font class for Dancing Script */
+.font-dancing {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 400;
 }

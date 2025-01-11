@@ -7,7 +7,7 @@ const Header = () => {
 
   return (
     <header className="py-5">
-      <div className="container mx-auto text-center">
+      <div className="container mx-auto text-center text-lg">
         <Link href="/">
           <Image
             src="/ANNEMARIE.svg"

@@ -23,7 +23,7 @@ const TextAreaField = ({ name, placeholder, rows, required = true }) => (
 
 const ContactForm = () => {
   return (
-    <section className="flex justify-center px-8 pb-8">
+    <section className="flex justify-center px-8 pb-8 text-lg">
       <div className={`w-full ${FORM_WIDTH}`}>
         <h2 className="text-2xl mb-4 font-light text-center">Kontakt</h2>
         {/* Form with Formspree integration */}

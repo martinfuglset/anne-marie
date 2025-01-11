@@ -12,7 +12,8 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        garamond: ['"EB Garamond"', 'serif'], // Custom font alias
+        garamond: ['"EB Garamond"', 'serif'], // Custom alias for EB Garamond
+        dancing: ['"Dancing Script"', 'cursive'], // Custom alias for Dancing Script
       },
       transitionTimingFunction: {
         'in-out-smooth': 'cubic-bezier(0.4, 0, 0.2, 1)', // Smoother easing
