@@ -30,11 +30,8 @@ export default function Home() {
 
       {/* Highlight Section */}
       <section className={`${dancingScript.className} mt-8 mb-12 px-8 text-center`}>
-        <p className="text-lg leading-relaxed mb-4">
-          Blomster, dekor og kaker til din spesielle dag
-        </p>
         <div className="flex justify-center">
-          <img src="/flower-border.svg" alt="Flower Border" className="w-[40%] h-auto" />
+          <img src="/flower-border.svg" alt="Flower Border" className="w-[60%] h-auto" />
         </div>
       </section>
 
